@@ -1,0 +1,14 @@
+<h1>Parent Component</h1>
+
+<p>
+
+
+  Message To child : <input type="text" [(ngModel)]="MessageToChild">
+
+  <button (click)="parentComponentMethod()">Invoke Child Component Method</button>
+  <button (click)="parentComponentMethodWithParams()">Invoke Child Component Method with parameters</button>
+
+  Message from Child : {{MessageFromChild}}
+
+  <app-child (MessageToParent)="getMessage($event)" [MessageFromParent]="MessageToChild"></app-child>
+</p>
